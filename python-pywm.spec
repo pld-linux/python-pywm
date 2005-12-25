@@ -5,7 +5,7 @@ Summary:	Module for WindowMaker docklets
 Summary(pl):	Modu³ do tworzenia dokletów dla WindowMakera
 Name:		python-%{module}
 Version:	0.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Python
 Source0:	http://errl.info/pywmdockapps/downloads/current/pywmgeneral-%{version}.tar.gz
@@ -13,6 +13,7 @@ Source0:	http://errl.info/pywmdockapps/downloads/current/pywmgeneral-%{version}.
 URL:		http://errl.info/pywmdockapps/
 BuildRequires:	XFree86-devel
 BuildRequires:	python-devel >= 1:2.4
+BuildRequires:	sed >= 4.0
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -53,6 +54,8 @@ zaimportowanie go z poziomu interaktywnego interpretera i wywo³anie
 
 %prep
 %setup -q -n pywmgeneral-%{version}
+
+sed -i -e 's,/usr/X11R6/lib,/usr/X11R6/%{_lib},' setup.py
 
 %build
 CFLAGS="%{rpmcflags}"
