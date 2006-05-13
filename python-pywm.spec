@@ -1,16 +1,17 @@
 
 %define		module	pywm
+%define 	ver	0-1-6
 
 Summary:	Module for WindowMaker docklets
 Summary(pl):	Modu³ do tworzenia dokletów dla WindowMakera
 Name:		python-%{module}
-Version:	0.1
-Release:	2
+Version:	0.1.6
+Release:	1
 License:	GPL
 Group:		Development/Languages/Python
-Source0:	http://errl.info/pywmdockapps/downloads/current/pywmgeneral-%{version}.tar.gz
-# Source0-md5:	a393198a17f0c3f14920525cffc82669
-URL:		http://errl.info/pywmdockapps/
+Source0:	http://dl.sourceforge.net/sourceforge/pywmdockapps/pywmdockapps.%{ver}.tar.gz
+# Source0-md5:	e5f1152984862d1cf9925b169c0e8681
+URL:		http://pywmdockapps.sourceforge.net/
 BuildRequires:	XFree86-devel
 BuildRequires:	python-devel >= 1:2.4
 BuildRequires:	sed >= 4.0
@@ -53,7 +54,7 @@ zaimportowanie go z poziomu interaktywnego interpretera i wywo³anie
 "help(pywmhelpers)".
 
 %prep
-%setup -q -n pywmgeneral-%{version}
+%setup -q -n pywmgeneral
 
 sed -i -e 's,/usr/X11R6/lib,/usr/X11R6/%{_lib},' setup.py
 
