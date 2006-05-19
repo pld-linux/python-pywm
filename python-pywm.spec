@@ -9,7 +9,7 @@ Version:	0.1.6
 Release:	1
 License:	GPL
 Group:		Development/Languages/Python
-Source0:	http://dl.sourceforge.net/sourceforge/pywmdockapps/pywmdockapps.%{ver}.tar.gz
+Source0:	http://dl.sourceforge.net/pywmdockapps/pywmdockapps.%{ver}.tar.gz
 # Source0-md5:	e5f1152984862d1cf9925b169c0e8681
 URL:		http://pywmdockapps.sourceforge.net/
 BuildRequires:	XFree86-devel
