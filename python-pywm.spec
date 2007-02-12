@@ -3,7 +3,7 @@
 %define 	ver	0-1-6
 
 Summary:	Module for WindowMaker docklets
-Summary(pl):	Modu≥ do tworzenia dokletÛw dla WindowMakera
+Summary(pl.UTF-8):   Modu≈Ç do tworzenia doklet√≥w dla WindowMakera
 Name:		python-%{module}
 Version:	0.1.6
 Release:	1
@@ -35,22 +35,22 @@ about how to use the module, see the documentation in pywmhelpers.py.
 It is also possible to import it in the interactive interpreter and
 issue 'help(pywmhelpers)'.
 
-%description -l pl
-Pywmgeneral to modu≥ Pythona pomocny przy tworzeniu dokletÛw dla
-WindowMakera w Pythonie. Jest to w wiÍkszo∂ci wrapper dla funkcji z
-popularnego wmgeneral.c, ale dodano teø trochÍ nowych funkcji.
+%description -l pl.UTF-8
+Pywmgeneral to modu≈Ç Pythona pomocny przy tworzeniu doklet√≥w dla
+WindowMakera w Pythonie. Jest to w wiƒôkszo≈õci wrapper dla funkcji z
+popularnego wmgeneral.c, ale dodano te≈º trochƒô nowych funkcji.
 
-Pakiet zawiera takøe napisany w Pythonie modu≥ pywmhelpers.py
-zawieraj±ce funkcje pomocne przy tworzeniu dokletÛw WM. Ten modu≥
-zawiera funkcje Pythona obudowuj±ce funkcje dostarczane przez modu≥
-rozszerzenia. U≥atwiaj± przekazywanie argumentÛw i zwracaj±
-przyjemniejsze warto∂ci. DostÍpne jest teø trochÍ dodatkowych funkcji,
-takich jak pomoc przy obs≥udze prostego pliku konfiguracyjnego. Ten
-modu≥ jest lepiej udokumentowany niø pywmgeneral. Zalecane jest
-uøywanie wy≥±cznie pywmhelpers i nie ruszanie w ogÛle modu≥u
-pywmgeneral bezpo∂rednio. Informacje o sposobie korzystania z modu≥u
-znajduj± siÍ w dokumentacji w pywmhelpers.py. Moøliwe jest takøe
-zaimportowanie go z poziomu interaktywnego interpretera i wywo≥anie
+Pakiet zawiera tak≈ºe napisany w Pythonie modu≈Ç pywmhelpers.py
+zawierajƒÖce funkcje pomocne przy tworzeniu doklet√≥w WM. Ten modu≈Ç
+zawiera funkcje Pythona obudowujƒÖce funkcje dostarczane przez modu≈Ç
+rozszerzenia. U≈ÇatwiajƒÖ przekazywanie argument√≥w i zwracajƒÖ
+przyjemniejsze warto≈õci. Dostƒôpne jest te≈º trochƒô dodatkowych funkcji,
+takich jak pomoc przy obs≈Çudze prostego pliku konfiguracyjnego. Ten
+modu≈Ç jest lepiej udokumentowany ni≈º pywmgeneral. Zalecane jest
+u≈ºywanie wy≈ÇƒÖcznie pywmhelpers i nie ruszanie w og√≥le modu≈Çu
+pywmgeneral bezpo≈õrednio. Informacje o sposobie korzystania z modu≈Çu
+znajdujƒÖ siƒô w dokumentacji w pywmhelpers.py. Mo≈ºliwe jest tak≈ºe
+zaimportowanie go z poziomu interaktywnego interpretera i wywo≈Çanie
 "help(pywmhelpers)".
 
 %prep
