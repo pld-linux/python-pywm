@@ -3,7 +3,7 @@
 %define 	ver	0-1-6
 
 Summary:	Module for WindowMaker docklets
-Summary(pl.UTF-8):   Moduł do tworzenia dokletów dla WindowMakera
+Summary(pl.UTF-8):	Moduł do tworzenia dokletów dla WindowMakera
 Name:		python-%{module}
 Version:	0.1.6
 Release:	1
