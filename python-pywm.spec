@@ -6,7 +6,7 @@ Summary:	Module for WindowMaker docklets
 Summary(pl.UTF-8):	Moduł do tworzenia dokletów dla WindowMakera
 Name:		python-%{module}
 Version:	0.1.6
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Python
 Source0:	http://dl.sourceforge.net/pywmdockapps/pywmdockapps.%{ver}.tar.gz
