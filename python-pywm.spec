@@ -1,20 +1,20 @@
-
 %define		module	pywm
-%define 	ver	0-1-6
-
+%define 	ver		0-1-6
 Summary:	Module for WindowMaker docklets
 Summary(pl.UTF-8):	Moduł do tworzenia dokletów dla WindowMakera
 Name:		python-%{module}
 Version:	0.1.6
-Release:	3
+Release:	4
 License:	GPL
 Group:		Development/Languages/Python
 Source0:	http://dl.sourceforge.net/pywmdockapps/pywmdockapps.%{ver}.tar.gz
 # Source0-md5:	e5f1152984862d1cf9925b169c0e8681
 URL:		http://pywmdockapps.sourceforge.net/
-BuildRequires:	XFree86-devel
-BuildRequires:	python-devel >= 1:2.4
+BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	sed >= 4.0
+BuildRequires:	xorg-lib-libX11-devel
+BuildRequires:	xorg-lib-libXext-devel
+BuildRequires:	xorg-lib-libXpm-devel
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -55,22 +55,20 @@ zaimportowanie go z poziomu interaktywnego interpretera i wywołanie
 
 %prep
 %setup -q -n pywmgeneral
-
-sed -i -e 's,/usr/X11R6/lib,/usr/X11R6/%{_lib},' setup.py
+%{__sed} -i -e 's,/usr/X11R6/lib,%{?_x_libraries}%{!?_x_libraries:%{_libdir}},' setup.py
 
 %build
 CFLAGS="%{rpmcflags}"
 export CFLAGS
-python setup.py build
+%{__python} setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT
-
-python setup.py install \
+%{__python} setup.py install \
 	--root=$RPM_BUILD_ROOT --optimize=2
 
-rm -f $RPM_BUILD_ROOT%{py_sitedir}/*.py
+%py_postclean
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -80,3 +78,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc README
 %{py_sitedir}/*.py[co]
 %attr(755,root,root) %{py_sitedir}/*.so
+%if "%{py_ver}" > "2.4"
+%{py_sitedir}/pywmgeneral-*.egg-info
+%endif
