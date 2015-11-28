@@ -60,15 +60,12 @@ zaimportowanie go z poziomu interaktywnego interpretera i wywołanie
 %{__sed} -i -e 's,/usr/X11R6/lib,%{?_x_libraries}%{!?_x_libraries:%{_libdir}},' setup.py
 
 %build
-CFLAGS="%{rpmcflags}"
-export CFLAGS
-%{__python} setup.py build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT
-%{__python} setup.py install \
-	--root=$RPM_BUILD_ROOT --optimize=2
+%py_install
 
 %py_postclean
 
