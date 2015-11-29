@@ -10,6 +10,7 @@ Group:		Development/Languages/Python
 Source0:	http://dl.sourceforge.net/pywmdockapps/pywmdockapps.%{ver}.tar.gz
 # Source0-md5:	e5f1152984862d1cf9925b169c0e8681
 URL:		http://pywmdockapps.sourceforge.net/
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	python-modules
 BuildRequires:	rpm-pythonprov
